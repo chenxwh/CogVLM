@@ -1,0 +1,21 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  gpu: true
+  python_version: "3.11"
+  python_packages:
+    - torch==2.0.1
+    - torchvision==0.15.2
+    - SwissArmyTransformer==0.4.11
+    - transformers==4.37.2
+    - xformers==0.0.22
+    - spacy==3.7.2
+    - pillow==10.2.0
+    - accelerate==0.26.1
+    - loguru==0.7.2
+    - timm==0.9.12
+    - bitsandbytes==0.42.0
+  run:
+    - pip install deepspeed
+predict: "predict.py:Predictor"
